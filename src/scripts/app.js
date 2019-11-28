@@ -1,1 +1,1 @@
-console.log('yoyoyoy');
+import "../sass/app.scss";

@@ -1,0 +1,20 @@
+{% block body %}
+{% include '/layouts/_base.twig' %}
+{% include '/layouts/_header.twig' %}
+{% set projects = craft.entries()
+    .section('projects')
+    .all() %}
+
+
+
+<h1>hii</h1>
+{% for project in projects %}
+    <h1> {{ project.title }} </h1>
+    <h1> {{ project.projectDescription }} </h1>
+    {% set projectImages = project.projectImages %}
+    {% for projectImage in projectImages %}
+    <img src='{{projectImage.getUrl}}'/>
+    {% endfor %}
+{% endfor %}
+
+{% endblock body %}

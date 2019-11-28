@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+    border-top: 1px black solid;
+}
