@@ -1,7 +1,13 @@
+@font-face {
+    font-family: "neutral";
+    src: url("../../web/assets/Neutral\ 117Bold.otf") format("otf");
+          
+   }
+
 body {
     margin: 0;
     padding: 0 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'neutral';
 }
 
 ul {
@@ -10,5 +16,61 @@ ul {
     width: 100%;
     padding: 0;
     justify-content: space-between;
-    border-top: 1px black solid;
+
+}
+
+.projects {
+    max-width: 900px;
+    margin: auto;
+}
+
+.captions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.caption-left {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.caption-right {
+    flex-basis: 50%;
+    padding: 0 10px;
+}
+
+.project-titles {
+    display: flex;
+    flex-direction: column;
+}
+.project-titre {
+    font-size: 12px;
+    margin: 0;
+}
+.project-title {
+    font-size: 12px;
+    margin: 0;
+}
+.project-date {
+    font-size: 12px;
+    margin: 0;
+}
+.project-description {
+    font-size: 12px;
+    margin: 0;
+}
+
+.project-imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    max-width: 800px;
+    padding: 10px 40px;
+    margin: auto;
 }

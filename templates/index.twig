@@ -1,20 +1,54 @@
+
 {% block body %}
 {% include '/layouts/_base.twig' %}
 {% include '/layouts/_header.twig' %}
+
 {% set projects = craft.entries()
     .section('projects')
     .all() %}
 
-
-
-<h1>hii</h1>
+<section class='projects'>
 {% for project in projects %}
-    <h1> {{ project.title }} </h1>
-    <h1> {{ project.projectDescription }} </h1>
-    {% set projectImages = project.projectImages %}
-    {% for projectImage in projectImages %}
-    <img src='{{projectImage.getUrl}}'/>
-    {% endfor %}
+
+    {% if project.backgroundColor %}
+        <style type="text/css">
+            .project {
+                background-color: {{ project.backgroundColor.getHex() }};
+            }
+        </style>
+    {% endif %}
+
+    <div class='project'>
+        <div class='captions'>
+        <div class='caption-left'>
+            {% if project.title %}
+            <div class='project-titles'>
+                <h1 class='project-titre'>TITRE</h1>
+                <h1  class='project-title'> {{ project.title }} </h1>
+            </div>
+            {% endif %}
+
+            {% if project.projectDate %}
+            <h1 class='project-date'> {{ project.projectDate|datetime('m-Y') }} </h1>
+            {% endif %}
+            </div>
+            <div class='caption-right'>
+            {% if project.projectDescription %}
+            <h1 class='project-description'> {{ project.projectDescription }} </h1>
+            {% endif %}
+            </div>
+        </div>
+
+
+            {% set projectImages = project.projectImages %}
+                <div class='project-imgs'>
+                {% for projectImage in projectImages %}
+                    <img class='project-img' src='{{projectImage.getUrl}}'/>
+                {% endfor %}
+                </div>
+    </div>
 {% endfor %}
+</section>
+
 
 {% endblock body %}
