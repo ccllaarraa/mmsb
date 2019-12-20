@@ -9,8 +9,10 @@ body {
     padding: 0 20px;
     font-family: 'neutral';
 }
+button:focus {outline:0;}
+img:focus {outline:0;}
 
-ul {
+.header {
     display: flex;
     list-style-type: none;
     width: 100%;
@@ -18,7 +20,9 @@ ul {
     justify-content: space-between;
 
 }
-
+.backtotop {
+    cursor: pointer;
+}
 .projects {
     max-width: 900px;
     margin: auto;
@@ -31,6 +35,31 @@ ul {
     margin: 20px 0;
 }
 
+.captions-switch {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}
+.plus {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(#000,#000), linear-gradient(#000,#000), transparent;
+    background-position: center;
+    background-size: 50% 0.7px,0.7px 50%;
+    background-repeat: no-repeat;
+}
+
+.minus {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(#000, #000), linear-gradient(#000, #000), transparent;
+    background-position: center;
+    background-size: 50% 0.7px;
+    background-repeat: no-repeat;
+}
 .caption-left {
     display: flex;
     flex-basis: 50%;
@@ -71,6 +100,43 @@ ul {
 
 .project-img {
     max-width: 800px;
-    padding: 10px 40px;
+    padding: 10px 60px;
     margin: auto;
+}
+
+//slick styling
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+	
+		li {
+			margin: 0 0.25rem;
+        }
+        li:only-child {
+            display: none;
+        }
+	
+		button {
+			display: block;
+			width: 9px;
+			height: 9px;
+			padding: 0;
+			
+			border: 1px solid grey;
+			border-radius: 100%;
+			background-color: transparent;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			background-color: grey;
+		}
+	
 }

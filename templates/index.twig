@@ -9,35 +9,32 @@
 
 <section class='projects'>
 {% for project in projects %}
-
-    {% if project.backgroundColor %}
-        <style type="text/css">
-            .project {
-                background-color: {{ project.backgroundColor.getHex() }};
-            }
-        </style>
-    {% endif %}
-
-    <div class='project'>
-        <div class='captions'>
-        <div class='caption-left'>
-            {% if project.title %}
-            <div class='project-titles'>
-                <h1 class='project-titre'>TITRE</h1>
-                <h1  class='project-title'> {{ project.title }} </h1>
-            </div>
-            {% endif %}
-
-            {% if project.projectDate %}
-            <h1 class='project-date'> {{ project.projectDate|datetime('m-Y') }} </h1>
-            {% endif %}
-            </div>
-            <div class='caption-right'>
-            {% if project.projectDescription %}
-            <h1 class='project-description'> {{ project.projectDescription }} </h1>
-            {% endif %}
-            </div>
+    <div class='project' style=" background-color: {{ project.backgroundColor | default('') }};"
+     {{ project.backgroundColor == '#ffffff' ? "style= ' border-bottom: 2px solid red;'" : "" }} 
+       >
+        <div class='captions-switch'> 
+                    <div class='plus'></div>
+                    <div class='minus'></div>
         </div>
+        <div class='captions'>
+            <div class='caption-left'>
+                {% if project.title %}
+                <div class='project-titles'>
+                    <h1 class='project-titre'>TITRE</h1>
+                    <h1  class='project-title'> {{ project.title }} </h1>
+                </div>
+                {% endif %}
+
+                {% if project.projectDate %}
+                <h1 class='project-date'> {{ project.projectDate|datetime('m-Y') }} </h1>
+                {% endif %}
+                </div>
+                <div class='caption-right'>
+                {% if project.projectDescription %}
+                <h1 class='project-description'> {{ project.projectDescription }} </h1>
+                {% endif %}
+                </div>
+            </div>
 
 
             {% set projectImages = project.projectImages %}
@@ -50,5 +47,5 @@
 {% endfor %}
 </section>
 
-
+{% include '/layouts/_footer.twig' %}
 {% endblock body %}
