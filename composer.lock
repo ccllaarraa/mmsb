@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4300438c8a041126409e082eff3bb87",
+    "content-hash": "1eae333a43aa46e9a67234f037d90c83",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -142,6 +142,58 @@
                 "sdk"
             ],
             "time": "2019-11-18T19:13:19+00:00"
+        },
+        {
+            "name": "biglotteryfund/preview-button",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/biglotteryfund/craft-preview-button.git",
+                "reference": "6a0a4967c3591848bf07a400960788c9d217050e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/biglotteryfund/craft-preview-button/zipball/6a0a4967c3591848bf07a400960788c9d217050e",
+                "reference": "6a0a4967c3591848bf07a400960788c9d217050e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Preview Button",
+                "handle": "preview-button",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/biglotteryfund/craft-preview-button/master/CHANGELOG.md",
+                "class": "biglotteryfund\\previewbutton\\PreviewButton"
+            },
+            "autoload": {
+                "psr-4": {
+                    "biglotteryfund\\previewbutton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Big Lottery Fund",
+                    "homepage": "https://www.github.com/biglotteryfund"
+                }
+            ],
+            "description": "Adds a preview button to the entry editor screen to allow previewing of draft/revision entries",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "preview button"
+            ],
+            "time": "2019-10-11T14:59:27+00:00"
         },
         {
             "name": "cebe/markdown",

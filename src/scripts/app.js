@@ -8,19 +8,14 @@ $(document).ready(function(){
         dots: true,
         centerMode: true,
         arrows: false,
+        variableWidth: true,
     });
 
     $('.minus').hide();
     $('.captions').hide();
     $(".plus").click(function(){
-        $(".captions").slideToggle();
-        $('.plus').hide();
-        $('.minus').show();    
-    });
-    $(".minus").click(function(){
-        $(".captions").slideToggle();
-        $('.minus').hide();
-        $('.plus').show();    
+        $(this).parent().next('.captions').slideToggle();
+        $(this).toggleClass('plus minus');
     });
 
     var btn = $('.backtotop');

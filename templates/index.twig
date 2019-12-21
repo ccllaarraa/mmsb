@@ -43,6 +43,14 @@
                     <img class='project-img' src='{{projectImage.getUrl}}'/>
                 {% endfor %}
                 </div>
+
+            {% if project.availableBtn %}
+                <div class="available">
+                    <div>*****</div>
+                    <div> Available on <span>  </span> <a href='http://www.revue-diorama.com/' target='_blank'> revue-diorama.com</a> </div>
+                    </div>
+            {% endif %}
+
     </div>
 {% endfor %}
 </section>
