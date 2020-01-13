@@ -7,10 +7,14 @@
     .section('projects')
     .all() %}
 
+
+
+
+
 <section class='projects'>
 {% for project in projects %}
     <div class='project' style=" background-color: {{ project.backgroundColor | default('') }};"
-     {{ project.backgroundColor == '#ffffff' ? "style= ' border-bottom: 2px solid red;'" : "" }} 
+     {# {{ project.backgroundColor == '#ffffff' ? "style= ' border-bottom: 2px solid red;'" : "" }}  #}
        >
         <div class='captions-switch'> 
                     <div class='plus'></div>
@@ -43,6 +47,25 @@
                     <img class='project-img' src='{{projectImage.getUrl}}'/>
                 {% endfor %}
                 </div>
+
+            {# {% set videoLink = project.lienVideo %}
+                 {% if videoLink %}
+                {% set video = craft.embeddedAssets.get(videoLink) %}
+                <div class="video__container">
+                     {{ video.getVideoUrl(['autoplay=1', 'controls=0', 'playsinline=1']) }} 
+                </div>
+                {% endif %} #}
+
+
+            {# {% set embeddedAsset = craft.embeddedAssets.get(project.lienVideo) %}
+            {% if embeddedAsset  %}
+            <div class="video_header__container">
+                <div class="video__container">
+                    {{ embeddedAsset ? embeddedAsset.getVideoCode(['autoplay=1', 'controls=1', 'playsinline=1', 'rel=0']) }}
+                </div>
+            </div>
+            {% endif %} #}
+
 
             {% if project.availableBtn %}
                 <div class="available">

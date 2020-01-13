@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'neutral';
+    font-family: 'Neutral Regular', 'neutral';
 }
 a {text-decoration: none;}
 a:visited { text-decoration: none;color:black  }
@@ -38,7 +38,9 @@ img:focus {outline:0;}
 .header--right--top {
     margin-left: 40px;
 }
-
+.header2 {
+    color: white;
+}
 .projects {
     max-width: 900px;
     margin: auto;
@@ -191,6 +193,16 @@ img:focus {outline:0;}
     display: flex;
     justify-content: space-between;
     margin: 80px 40px;
+}
+//tv 
+
+.tv {
+    background-color: grey;
+    min-height: 100vh;
+}
+
+.header2 a:visited {
+    color:white;
 }
 
 @media only screen and (max-width: 900px) {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1eae333a43aa46e9a67234f037d90c83",
+    "content-hash": "ef77007ed7b165484bab1cf2d627c006",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -924,6 +924,59 @@
                 "php-emoji"
             ],
             "time": "2018-09-28T05:23:38+00:00"
+        },
+        {
+            "name": "embed/embed",
+            "version": "v3.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/Embed.git",
+                "reference": "dc1dc3c126f8a78acdae06b83f591c0728ea131d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/dc1dc3c126f8a78acdae06b83f591c0728ea131d",
+                "reference": "dc1dc3c126f8a78acdae06b83f591c0728ea131d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "ext-curl": "*",
+                "ext-mbstring": "*",
+                "php": "^5.6|^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpunit/phpunit": "^4.8|^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Embed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to retrieve page info using oembed, opengraph, etc",
+            "homepage": "https://github.com/oscarotero/Embed",
+            "keywords": [
+                "embed",
+                "embedly",
+                "oembed",
+                "opengraph",
+                "twitter cards"
+            ],
+            "time": "2019-09-16T19:34:02+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -3078,6 +3131,62 @@
                 "phra"
             ],
             "time": "2015-10-13T18:44:15+00:00"
+        },
+        {
+            "name": "spicyweb/craft-embedded-assets",
+            "version": "2.1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spicywebau/craft-embedded-assets.git",
+                "reference": "272616d4e22e1063ad5a8ce506c799f71b1ffc9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/272616d4e22e1063ad5a8ce506c799f71b1ffc9f",
+                "reference": "272616d4e22e1063ad5a8ce506c799f71b1ffc9f",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0",
+                "embed/embed": "^3.4.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "embeddedassets",
+                "name": "Embedded Assets",
+                "schemaVersion": "1.0.0",
+                "class": "spicyweb\\embeddedassets\\Plugin",
+                "changelogUrl": "https://github.com/spicywebau/craft-embedded-assets/blob/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/master.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "spicyweb\\embeddedassets\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Spicy Web",
+                    "homepage": "https://spicyweb.com.au"
+                }
+            ],
+            "description": "Manage YouTube videos, Instagram photos, Twitter posts and more as first class assets",
+            "keywords": [
+                "assets",
+                "cms",
+                "craftcms",
+                "embed",
+                "instagram",
+                "plugin",
+                "twitter",
+                "vimeo",
+                "youtube"
+            ],
+            "time": "2019-10-28T05:09:36+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
