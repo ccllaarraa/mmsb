@@ -5,13 +5,16 @@
     'extraClasses': 'header2',
     } %} 
 
-{% set asset = entry.lienVideo %}
-    {% if asset %}
-         {% set video = craft.embeddedAssets.get(asset) %}
-        <div class="video__container">
-                {# {{ video.getVideoUrl(['autoplay=1', 'controls=0', 'playsinline=1'])  }}  #}
-        </div> 
-    {% endif %} 
+    <div class='tv__project'>
+    {% set asset = entry.lienVideo.one() %}
+        {% if asset %}
+        {% set video = craft.embeddedAssets.get(asset) %}
+            <div class="video__container">
+                {{ video ? video.getVideoCode(['autoplay=1', 'controls=1', 'playsinline=1', 'rel=0']) }}
+            </div> 
+        {% endif %} 
+    </div>
+
 
 </section>
 

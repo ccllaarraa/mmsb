@@ -48,23 +48,14 @@
                 {% endfor %}
                 </div>
 
-            {# {% set videoLink = project.lienVideo %}
-                 {% if videoLink %}
-                {% set video = craft.embeddedAssets.get(videoLink) %}
-                <div class="video__container">
-                     {{ video.getVideoUrl(['autoplay=1', 'controls=0', 'playsinline=1']) }} 
-                </div>
-                {% endif %} #}
 
-
-            {# {% set embeddedAsset = craft.embeddedAssets.get(project.lienVideo) %}
-            {% if embeddedAsset  %}
-            <div class="video_header__container">
-                <div class="video__container">
-                    {{ embeddedAsset ? embeddedAsset.getVideoCode(['autoplay=1', 'controls=1', 'playsinline=1', 'rel=0']) }}
-                </div>
-            </div>
-            {% endif %} #}
+            {% set asset = project.lienVideo.one() %}
+                {% if asset %}
+                {% set video = craft.embeddedAssets.get(asset) %}
+                    <div class="video__container">
+                           {{ video ? video.getVideoCode(['autoplay=0', 'controls=1', 'playsinline=1', 'rel=0']) }}
+                    </div> 
+                {% endif %}  
 
 
             {% if project.availableBtn %}

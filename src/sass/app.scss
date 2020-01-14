@@ -46,6 +46,10 @@ img:focus {outline:0;}
     margin: auto;
 }
 
+.project {
+    padding: 10px;
+}
+
 .captions {
     display: flex;
     width: 100%;
@@ -198,20 +202,43 @@ img:focus {outline:0;}
 
 .tv {
     background-color: grey;
-    min-height: 100vh;
+    min-height: 100vh;  
+    &__project {
+        max-width: 900px;
+        margin: 7vh auto;
+    }
 }
 
 .header2 a:visited {
     color:white;
 }
 
+.video__container {
+    position: relative;
+    padding-top: 56.25%;
+    padding-bottom: 0px;
+    height: 0;
+    overflow: hidden;
+    background: #000000;
+    margin: 20px;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+}
+
 @media only screen and (max-width: 900px) {
-body {
-    padding: 60px;
+.header, .header2 {
+    padding-top: 30px;
 }
 .header--left, .header--right {
     margin-top: 0;
+    margin-bottom: 30px;
 }
+
 .plus, .minus {
     width: 60px;
     height: 60px;
@@ -227,11 +254,14 @@ body {
     margin: 10px 0;
 }
 .project-img {
-    max-width: 600px;
+    max-width: 650px;
 }
 .available {
     width: 100%;
     margin-left: 0;
+}
+.footer {
+    padding: 40px;
 }
 .footer-main {
     max-width: 100%;
@@ -249,14 +279,34 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-    body {
-        padding: 20px;
+    .header, .header2 {
+        padding-top: 30px;
     }
+    
     .header--left {
-        padding-left: 0;
+        padding-left: 20px;
     }
     .header--right {
-        padding-right: 0; 
+        padding-right: 20px; 
     }
-    .project-img { width: 300px ;}
+    .project-img { max-width: 500px ;}
+    .footer {
+        padding: 30px;
+    }
+    .video__container {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .project-img { max-width: 380px ;}
+}
+
+
+@media only screen and (max-width: 380px) {
+    .project-img { max-width: 340px ;}
+}
+
+@media only screen and (max-width: 330px) {
+    .project-img { max-width: 300px ;}
 }
