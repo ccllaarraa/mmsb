@@ -4,6 +4,7 @@
     "biglotteryfund/preview-button": "^1.0",
     "craftcms/cms": "^3.0.0",
     "ether/seo": "^3.6",
+    "fortrabbit/craft-copy": "^1.0.0-RC9",
     "spicyweb/craft-embedded-assets": "2.1.1.1",
     "vlucas/phpdotenv": "^3.4.0"
   },
