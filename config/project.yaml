@@ -1,0 +1,310 @@
+dateModified: 1581519575
+email:
+  fromEmail: clarapasteau@gmail.com
+  fromName: clara
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  c620c0d1-6e5f-43cc-81cb-ac19f390fd28:
+    name: Common
+fields:
+  0fdebbf9-4893-4bf7-bc47-e522c793a481:
+    contentColumnType: boolean
+    fieldGroup: c620c0d1-6e5f-43cc-81cb-ac19f390fd28
+    handle: availableBtn
+    instructions: 'switch on to show ''Available on revue-diorama.com'' under project'
+    name: 'available on revue-diorama'
+    searchable: true
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  20b319a6-08e5-47b4-b167-18e00d250ba8:
+    contentColumnType: string(7)
+    fieldGroup: c620c0d1-6e5f-43cc-81cb-ac19f390fd28
+    handle: backgroundColor
+    instructions: "(optional)\r\ncouleur en fond pour montrer typo (les typos doivent être uploadés en png avec un background transparent)"
+    name: 'background color'
+    searchable: true
+    settings:
+      defaultColor: '#ffffff'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Color
+  2d391924-6015-4a56-a3a2-6cb46ea45b27:
+    contentColumnType: datetime
+    fieldGroup: c620c0d1-6e5f-43cc-81cb-ac19f390fd28
+    handle: projectDate
+    instructions: ''
+    name: date
+    searchable: true
+    settings:
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  42680994-672e-49a3-8e01-aa5277680c98:
+    contentColumnType: string
+    fieldGroup: c620c0d1-6e5f-43cc-81cb-ac19f390fd28
+    handle: lienVideo
+    instructions: 'tu peux uploader des liens video ici mais un seul lien uniquement (pas de slider possible pour les videos)'
+    name: 'Lien video'
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:594ae365-6d82-4035-bbce-0a53b0c2d7af'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: 'Ajoute le lien youtube dans les assets et selectionne le ici'
+      singleUploadLocationSource: 'volume:594ae365-6d82-4035-bbce-0a53b0c2d7af'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  a6aa7330-a8fd-431c-a2df-db804ea70816:
+    contentColumnType: string
+    fieldGroup: c620c0d1-6e5f-43cc-81cb-ac19f390fd28
+    handle: projectImages
+    instructions: ''
+    name: 'project image'
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:594ae365-6d82-4035-bbce-0a53b0c2d7af'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:594ae365-6d82-4035-bbce-0a53b0c2d7af'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b90583e1-f95e-49b8-8325-d7000ca4a6e6:
+    contentColumnType: text
+    fieldGroup: c620c0d1-6e5f-43cc-81cb-ac19f390fd28
+    handle: projectDescription
+    instructions: 'here type the description of the project'
+    name: 'project description'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+plugins:
+  copy:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      cacheDuration: 300
+      embedlyKey: ''
+      facebookKey: ''
+      googleKey: ''
+      iframelyKey: ''
+      maxAssetNameLength: 50
+      maxFileNameLength: 50
+      minImageSize: 16
+      parameters:
+        -
+          param: maxwidth
+          value: '800'
+        -
+          param: maxheight
+          value: '1080'
+      showThumbnailsInCp: true
+      soundcloudKey: ''
+      whitelist:
+        - 'amazon.*'
+        - 'amazon.co.*'
+        - amcharts.com
+        - baidu.com
+        - collegehumor.com
+        - dailymotion.com
+        - deviantart.com
+        - embed.ly
+        - 'facebook.*'
+        - 'facebook.co.*'
+        - 'facebook.com.*'
+        - fb.com
+        - 'google.*'
+        - 'google.co.*'
+        - 'google.com.*'
+        - hulu.com
+        - iframely.com
+        - imgur.com
+        - instagr.am
+        - instagram.com
+        - kickstarter.com
+        - meetup.com
+        - meetupstatic.com
+        - netfix.com
+        - reddit.com
+        - soundcloud.com
+        - t.co
+        - 'twitter.*'
+        - 'twitter.co.*'
+        - 'twitter.com.*'
+        - twimg.com
+        - vimeo.com
+        - vine.co
+        - wikipedia.org
+        - wikimedia.org
+        - wordpress.com
+        - yahoo.com
+        - youtu.be
+        - youtube.com
+        - youtube-nocookie.com
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  preview-button:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
+sections:
+  393165c2-55e5-4db1-871c-b6051a007f0f:
+    enableVersioning: true
+    entryTypes:
+      af28d217-dcf1-4864-ab2d-94242a00f64d:
+        fieldLayouts:
+          a676de23-a5c2-4b0e-a234-644ded3498cc:
+            tabs:
+              -
+                fields:
+                  0fdebbf9-4893-4bf7-bc47-e522c793a481:
+                    required: false
+                    sortOrder: 6
+                  20b319a6-08e5-47b4-b167-18e00d250ba8:
+                    required: false
+                    sortOrder: 5
+                  2d391924-6015-4a56-a3a2-6cb46ea45b27:
+                    required: false
+                    sortOrder: 4
+                  42680994-672e-49a3-8e01-aa5277680c98:
+                    required: false
+                    sortOrder: 3
+                  a6aa7330-a8fd-431c-a2df-db804ea70816:
+                    required: false
+                    sortOrder: 2
+                  b90583e1-f95e-49b8-8325-d7000ca4a6e6:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 1'
+                sortOrder: 1
+        handle: projects
+        hasTitleField: true
+        name: Projects
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: projects
+    name: Projects
+    propagationMethod: all
+    siteSettings:
+      932d632b-8ebb-4c61-9a67-d4fd97e89f61:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: '{slug}'
+    type: channel
+  46031045-fbd2-4844-85d7-54bb3e11c87b:
+    enableVersioning: true
+    entryTypes:
+      0bef9e1d-9029-4c3d-9034-7ac8f6e62913:
+        fieldLayouts:
+          62eb872f-f547-4316-bb33-8ddd72aeb26b:
+            tabs:
+              -
+                fields:
+                  42680994-672e-49a3-8e01-aa5277680c98:
+                    required: false
+                    sortOrder: 2
+                  b90583e1-f95e-49b8-8325-d7000ca4a6e6:
+                    required: false
+                    sortOrder: 1
+                name: 'Tab 1'
+                sortOrder: 1
+        handle: videoPage
+        hasTitleField: true
+        name: 'Video Page'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: videoPage
+    name: 'Video Page'
+    propagationMethod: all
+    siteSettings:
+      932d632b-8ebb-4c61-9a67-d4fd97e89f61:
+        enabledByDefault: true
+        hasUrls: true
+        template: layouts/_tv
+        uriFormat: tv
+    type: channel
+siteGroups:
+  b9fff1cf-4026-4fd6-8bf7-e7467573ecbc:
+    name: clara
+sites:
+  932d632b-8ebb-4c61-9a67-d4fd97e89f61:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: clara
+    primary: true
+    siteGroup: b9fff1cf-4026-4fd6-8bf7-e7467573ecbc
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: clara
+  schemaVersion: 3.3.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  594ae365-6d82-4035-bbce-0a53b0c2d7af:
+    handle: uploads
+    hasUrls: true
+    name: uploads
+    settings:
+      path: ./uploads
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: uploads
