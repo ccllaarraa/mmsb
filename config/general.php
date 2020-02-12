@@ -44,6 +44,6 @@ return [
     'production' => [
         'devMode'           => false,
         'allowUpdates'      => false,
-        'allowAdminChanges  => false,
-    ],
+        'allowAdminChanges'  => false,
+    ]
 ];
