@@ -13,19 +13,14 @@ return [
     '*' => [
         // Default Week Start Day (0 = Sunday, 1 = Monday...)
         'defaultWeekStartDay' => 1,
-
         // Whether generated URLs should omit "index.php"
         'omitScriptNameInUrls' => true,
-
         // Control Panel trigger word
         'cpTrigger' => 'admin',
-
-       
+        'useProjectConfigFile' => true,
+        'securityKey'          => getenv('SECURITY_KEY'),
+        'siteUrl'              => getenv('SITE_URL') ?: '@web'
     
-            'useProjectConfigFile' => true,
-            'securityKey'          => getenv('SECURITY_KEY'),
-            'siteUrl'              => getenv('SITE_URL') ?: '@web'
-        
     ],
 
     // Dev environment settings
