@@ -20,14 +20,12 @@ return [
         // Control Panel trigger word
         'cpTrigger' => 'admin',
 
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => getenv('SECURITY_KEY'),
-
-        // Whether to save the project config out to config/project.yaml
-        // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => false,
-
-     
+       
+    
+            'useProjectConfigFile' => true,
+            'securityKey'          => getenv('SECURITY_KEY'),
+            'siteUrl'              => getenv('SITE_URL') ?: '@web'
+        
     ],
 
     // Dev environment settings
@@ -44,7 +42,8 @@ return [
 
     // Production environment settings
     'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
+        'devMode'           => false,
+        'allowUpdates'      => false,
+        'allowAdminChanges  => false,
     ],
 ];
