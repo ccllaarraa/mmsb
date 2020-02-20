@@ -37,7 +37,7 @@ return [
 
     // Production environment settings
     'production' => [
-        'devMode'           => true,
+        'devMode'           => false,
         'allowUpdates'      => false,
         'allowAdminChanges'  => false,
     ]
