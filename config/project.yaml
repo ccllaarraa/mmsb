@@ -1,4 +1,4 @@
-dateModified: 1581519575
+dateModified: 1582185376
 email:
   fromEmail: clarapasteau@gmail.com
   fromName: clara
@@ -116,8 +116,6 @@ fields:
     type: craft\fields\PlainText
 plugins:
   copy:
-    edition: standard
-    enabled: true
     schemaVersion: 1.0.0
   embeddedassets:
     edition: standard
@@ -232,6 +230,10 @@ sections:
         titleLabel: Title
     handle: projects
     name: Projects
+    previewTargets:
+      -
+        label: 'Page entrée primaire'
+        urlFormat: '{url}'
     propagationMethod: all
     siteSettings:
       932d632b-8ebb-4c61-9a67-d4fd97e89f61:
@@ -265,6 +267,10 @@ sections:
         titleLabel: Title
     handle: videoPage
     name: 'Video Page'
+    previewTargets:
+      -
+        label: 'Page entrée primaire'
+        urlFormat: '{url}'
     propagationMethod: all
     siteSettings:
       932d632b-8ebb-4c61-9a67-d4fd97e89f61:
@@ -290,7 +296,7 @@ system:
   edition: solo
   live: true
   name: clara
-  schemaVersion: 3.3.3
+  schemaVersion: 3.4.9
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
