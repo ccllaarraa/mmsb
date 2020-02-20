@@ -30,3 +30,8 @@
 *.zip
 
 *.unison.tmp
+
+craft/app/
+craft/plugins/
+craft/storage/
+craft/config/db.php
